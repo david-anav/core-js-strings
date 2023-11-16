@@ -1,7 +1,7 @@
 function removeFirstOccurrences(str, value) {
   if ( str.includes(value)){
-
-    return str.replace(str.substring(str.indexOf(value),str.indexOf(value)+value.length),'');
+    
+    return str.split(' ').reverse().join(' ').replace(str.substring(str.lastIndexOf(value),str.lastIndexOf(value)+value.length),'').split(' ').reverse().join(' ');
   }
   return str;
 }
