@@ -1,10 +1,14 @@
-function removeFirstOccurrences(str, value) {
-  if ( str.includes(value)){
-    
-    return str.split(' ').reverse().join(' ').replace(str.substring(str.lastIndexOf(value),str.lastIndexOf(value)+value.length),'').split(' ').reverse().join(' ');
+function formatTime(minutes, seconds) {
+  let min = minutes.toString();
+  let sec = seconds.toString();
+  if(min.length === 1){
+    console.log(min = min.padStart(2,"0"))
+
   }
-  return str;
+  if (sec.length === 1){
+    sec = sec.padStart(2,"0")
+  }
+  return min.toString().concat(':', sec.toString());
 }
 
-console.log(removeFirstOccurrences('To be or not to be', 'be'));
-
+console.log(formatTime(5,6))
