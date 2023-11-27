@@ -1,8 +1,9 @@
-console.log(extractNameFromTemplate('Hello, John Doe!')) /*'John Doe'*/
-console.log(extractNameFromTemplate('Hello, Chuck Norris!')) /*'Chuck Norris'*/
+console.log(unbracketTag('<div>') )/*'div'*/
+console.log(unbracketTag('<span>') );/*'span'*/
+console.log(unbracketTag('<a>'));/*'a'*/
 
-function extractNameFromTemplate(value) {
-  return value.replace('Hello,','').replace('!','')
+function unbracketTag(str) {
+  return str.replace('<','').replace('>','')
 }
 
 
